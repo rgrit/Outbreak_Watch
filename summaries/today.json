@@ -1,0 +1,27 @@
+[
+  {
+    "cve_id": "CVE-2025-30472",
+    "description": "Corosync through 3.1.9, if encryption is disabled or the attacker knows the encryption key, has a stack-based buffer overflow in orf_token_endian_convert in exec/totemsrp.c via a large UDP packet.",
+    "summary": "This vulnerability in Corosync through version 3.1.9 can be exploited through a stack-based buffer overflow in the encryption process or if the attacker has the encryption key. This could be done via a large UDP packet. This vulnerability could affect anyone using Corosync without encryption or with a known encryption key. To mitigate this risk, users should update to a version of Corosync that addresses this issue and ensure encryption is enabled with secure encryption keys."
+  },
+  {
+    "cve_id": "CVE-2024-13737",
+    "description": "The Motors \u2013 Car Dealer, Classifieds & Listing plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability checks on the motors_create_template and motors_delete_template functions in all versions up to, and including, 1.4.57. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete arbitrary posts or create listing templates. This issue requires Elementor plugin to be installed, which is a required plugin for Motors Starter Theme.",
+    "summary": "The Motors \u2013 Car Dealer, Classifieds & Listing plugin for WordPress has a security vulnerability that allows authenticated attackers with Subscriber-level access and above to delete posts or create listing templates. This affects all versions up to 1.4.57 and requires the Elementor plugin to be installed. To protect against this threat, users should update the plugin to version 1.4.58 or above."
+  },
+  {
+    "cve_id": "CVE-2024-13739",
+    "description": "The Newsletters plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the \"to\" parameter in all versions up to, and including, 4.9.9.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick an admin user into performing an action such as clicking on a link.",
+    "summary": "There is a security vulnerability in the Newsletters plugin for WordPress that allows attackers to inject harmful scripts onto web pages if they can trick an admin user into clicking on a link. This affects all versions up to 4.9.9.7. To protect against this threat, users should update to the latest version of the plugin and be cautious when clicking on unfamiliar links."
+  },
+  {
+    "cve_id": "CVE-2025-0723",
+    "description": "The ProfileGrid \u2013 User Profiles, Groups and Communities plugin for WordPress is vulnerable to blind and time-based SQL Injections via the rid and search parameters in all versions up to, and including, 5.9.4.7 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers, with Subscriber-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
+    "summary": "The ProfileGrid WordPress plugin is at risk of SQL Injections, which can allow attackers with certain access levels to access sensitive information from the database. Users of this plugin should update to version 5.9.4.8 or higher to patch this vulnerability and protect their data."
+  },
+  {
+    "cve_id": "CVE-2025-0724",
+    "description": "The ProfileGrid \u2013 User Profiles, Groups and Communities plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 5.9.4.5 via deserialization of untrusted input in the get_user_meta_fields_html function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.",
+    "summary": "The ProfileGrid plugin for WordPress is vulnerable to a security issue that could allow attackers with certain levels of access to inject malicious code into a website. This vulnerability only becomes a threat if the website is also using another plugin or theme that contains a specific type of exploit chain. Website administrators should update the ProfileGrid plugin to the latest version to protect against this vulnerability."
+  }
+]
