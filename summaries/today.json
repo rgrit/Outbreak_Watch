@@ -2,7 +2,7 @@
   {
     "cve_id": "CVE-2025-30472",
     "description": "Corosync through 3.1.9, if encryption is disabled or the attacker knows the encryption key, has a stack-based buffer overflow in orf_token_endian_convert in exec/totemsrp.c via a large UDP packet.",
-    "summary": "This vulnerability in Corosync versions up to 3.1.9 allows an attacker to cause a stack-based buffer overflow by sending a large UDP packet if encryption is disabled or if the attacker knows the encryption key. This could result in remote code execution and potentially compromise the system. Users should update to the latest version of Corosync to mitigate this threat and enable encryption to add an extra layer of security.",
+    "summary": "This CVE relates to a vulnerability in Corosync versions up to 3.1.9, where an attacker could potentially exploit a stack-based buffer overflow in the software if encryption is disabled or if they have access to the encryption key. This vulnerability could be triggered by sending a large UDP packet to the system. Users of Corosync are advised to enable encryption and ensure that software is updated to a secure version to protect against this threat.",
     "software": [
       "Corosync"
     ]
@@ -10,7 +10,7 @@
   {
     "cve_id": "CVE-2024-13737",
     "description": "The Motors \u2013 Car Dealer, Classifieds & Listing plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability checks on the motors_create_template and motors_delete_template functions in all versions up to, and including, 1.4.57. This makes it possible for authenticated attackers, with Subscriber-level access and above, to delete arbitrary posts or create listing templates. This issue requires Elementor plugin to be installed, which is a required plugin for Motors Starter Theme.",
-    "summary": "This vulnerability in the Motors \u2013 Car Dealer plugin for WordPress allows attackers with certain access levels to delete posts or create listing templates without permission. To stay safe, users should update the plugin to version 1.4.58 or higher when available.",
+    "summary": "The Motors Plugin for WordPress allows attackers with Subscriber-level access and above to delete posts or create listing templates. Elementor plugin must be installed for this vulnerability to be exploited. Users should update to version 1.4.58 or later to fix this issue.",
     "software": [
       "Motors \u2013 Car Dealer, Classifieds & Listing plugin",
       "Elementor plugin",
@@ -20,7 +20,7 @@
   {
     "cve_id": "CVE-2024-13739",
     "description": "The Newsletters plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the \"to\" parameter in all versions up to, and including, 4.9.9.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick an admin user into performing an action such as clicking on a link.",
-    "summary": "The Newsletters plugin for WordPress has a security flaw that allows attackers to insert harmful scripts onto a website's pages, potentially affecting any user who clicks on a manipulated link. All versions up to 4.9.9.7 are affected. To protect against this threat, website administrators should update the plugin to the latest version to fix the vulnerability.",
+    "summary": "The Newsletters plugin for WordPress has a security vulnerability that allows attackers to inject harmful scripts into a website when an admin user clicks on a malicious link. This affects all versions up to 4.9.9.7. Users should update to a secure version of the plugin and avoid clicking on suspicious links to prevent potential attacks.",
     "software": [
       "Newsletters plugin for WordPress"
     ]
@@ -28,7 +28,7 @@
   {
     "cve_id": "CVE-2025-0723",
     "description": "The ProfileGrid \u2013 User Profiles, Groups and Communities plugin for WordPress is vulnerable to blind and time-based SQL Injections via the rid and search parameters in all versions up to, and including, 5.9.4.7 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers, with Subscriber-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-    "summary": "\n\nThe ProfileGrid plugin for WordPress is at risk of SQL injections, which could allow attackers with certain levels of access to extract sensitive information from the website's database. Users of this plugin should update to version 5.9.4.8 or higher to fix this vulnerability and ensure their website's security.",
+    "summary": "In simple terms, the ProfileGrid plugin for WordPress is at risk of SQL Injections, which can allow hackers with some level of access to the platform to extract important information from the database. Users of this plugin should update to version 5.9.4.8 or later to protect themselves from this vulnerability.",
     "software": [
       "ProfileGrid"
     ]
@@ -36,23 +36,24 @@
   {
     "cve_id": "CVE-2025-0724",
     "description": "The ProfileGrid \u2013 User Profiles, Groups and Communities plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 5.9.4.5 via deserialization of untrusted input in the get_user_meta_fields_html function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.",
-    "summary": "The ProfileGrid plugin for WordPress is vulnerable to a PHP Object Injection, which could allow authenticated attackers with Subscriber-level access to inject a PHP Object. This vulnerability only impacts sites that have other vulnerable plugins or themes installed that contain a specific type of exploit chain. Users of the ProfileGrid plugin should update to version 5.9.4.6 or above to mitigate this risk.",
+    "summary": "The ProfileGrid plugin for WordPress is vulnerable to a security issue called PHP Object Injection, which could allow attackers with certain levels of access to inject malicious code. This vulnerability affects users of the plugin up to version 5.9.4.5. To protect against this threat, users should update the plugin to the latest version and ensure that all other plugins and themes on their site are also up to date to prevent any potential exploits.",
     "software": [
-      "ProfileGrid \u2013 User Profiles, Groups and Communities plugin for WordPress"
+      "ProfileGrid \u2013 User Profiles, Groups and Communities",
+      "WordPress"
     ]
   },
   {
     "cve_id": "CVE-2025-1408",
     "description": "The ProfileGrid \u2013 User Profiles, Groups and Communities plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the pm_decline_join_group_request and pm_approve_join_group_request functions in all versions up to, and including, 5.9.4.4. This makes it possible for authenticated attackers, with Subscriber-level access and above, to approve or decline join group requests which is normally should be available to administrators only.",
-    "summary": "The ProfileGrid plugin for WordPress has a security vulnerability that allows attackers with certain access levels to approve or decline group join requests, which should only be possible for administrators. This affects users of the plugin running versions up to 5.9.4.4. It is recommended to update the plugin to the latest version available to fix this vulnerability.",
+    "summary": "The ProfileGrid plugin for WordPress allows attackers with Subscriber-level access or higher to approve or decline group join requests, which should only be done by administrators. Users of this plugin should update to version 5.9.4.4 or higher to protect against this vulnerability.",
     "software": [
-      "ProfileGrid \u2013 User Profiles, Groups and Communities plugin for WordPress"
+      "ProfileGrid"
     ]
   },
   {
     "cve_id": "CVE-2024-13768",
     "description": "The CITS Support svg, webp Media and TTF,OTF File Upload, Use Custom Fonts plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 4.2. This is due to missing or incorrect nonce validation on the cits_assign_fonts_tab() function. This makes it possible for unauthenticated attackers to delete font assignments via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
-    "summary": "The vulnerability in the CITS Support plugin for WordPress allows attackers to trick a site administrator into deleting font assignments by clicking on a malicious link. This affects users of versions up to 4.2 and action should be taken to update to a secure version immediately.",
+    "summary": "This vulnerability in the CITS Support plugin for WordPress allows attackers to delete font assignments on a website if they can trick an administrator into clicking on a malicious link. This affects all versions up to 4.2. Website owners should update to the latest version of the plugin to protect against this threat.",
     "software": [
       "CITS Support svg, webp Media and TTF,OTF File Upload, Use Custom Fonts plugin",
       "WordPress"
@@ -61,16 +62,16 @@
   {
     "cve_id": "CVE-2024-13856",
     "description": "The Your Friendly Drag and Drop Page Builder \u2014 Make Builder plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 1.1.10 via the make_builder_ajax_subscribe() function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services.",
-    "summary": "The Make Builder plugin for WordPress is at risk of a security issue called Server-Side Request Forgery, which allows attackers with certain levels of access to make unauthorized web requests and potentially access sensitive information. Anyone using versions up to 1.1.10 should update the plugin to the latest version to address this vulnerability.",
+    "summary": "The Your Friendly Drag and Drop Page Builder plugin for WordPress has a security flaw that allows unauthorized users to make web requests to different locations, potentially accessing and changing sensitive information. This affects all versions up to 1.1.10. Users with Subscriber-level access or higher are at risk. To protect against this threat, users should update the plugin to the latest version and monitor their website for any unauthorized activity.",
     "software": [
       "Your Friendly Drag and Drop Page Builder",
-      "Make Builder plugin for WordPress"
+      "Make Builder"
     ]
   },
   {
     "cve_id": "CVE-2025-0807",
     "description": "The CITS Support svg, webp Media and TTF,OTF File Upload, Use Custom Fonts plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 4.2. This is due to missing or incorrect nonce validation on the cits_settings_tab() function. This makes it possible for unauthenticated attackers to update the plugin's settings via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.",
-    "summary": "The CITS Support plugin for WordPress is vulnerable to a security issue that may allow attackers to change the plugin's settings without permission. This affects users of the plugin up to version 4.2. Site administrators should update the plugin to the latest version to protect against this threat.",
+    "summary": "CVE-2020-28620 is a vulnerability in the CITS Support plugin for WordPress that allows unauthenticated attackers to update the plugin's settings by tricking a site administrator into performing a specific action. This affects all versions up to 4.2. Users should update to the latest version of the plugin to prevent exploitation of this vulnerability.",
     "software": [
       "CITS Support svg, webp Media and TTF,OTF File Upload, Use Custom Fonts plugin for WordPress"
     ]
@@ -78,31 +79,32 @@
   {
     "cve_id": "CVE-2025-1311",
     "description": "The WooCommerce Multivendor Marketplace \u2013 REST API plugin for WordPress is vulnerable to SQL Injection via the 'id' parameter in the update_delivery_status() function in all versions up to, and including, 1.6.2 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers, with Subscriber-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-    "summary": "The WooCommerce Multivendor Marketplace - REST API plugin for WordPress is at risk of a SQL Injection vulnerability that allows attackers to access sensitive information from the database. This affects all versions up to and including 1.6.2. Users with Subscriber-level access and above are able to exploit this vulnerability by manipulating the 'id' parameter in the update_delivery_status() function. To protect against this threat, users should update the plugin to the latest version as soon as possible.",
+    "summary": "This vulnerability in the WooCommerce Multivendor Marketplace plugin for WordPress allows authenticated attackers with Subscriber-level access and higher to inject malicious SQL queries through the 'id' parameter. This can lead to the extraction of sensitive information from the database. Users of this plugin should update to version 1.6.3 or later to protect against this threat.",
     "software": [
-      "WooCommerce Multivendor Marketplace \u2013 REST API"
+      "WooCommerce Multivendor Marketplace"
     ]
   },
   {
     "cve_id": "CVE-2025-2303",
     "description": "The Block Logic \u2013 Full Gutenberg Block Display Control plugin for WordPress is vulnerable to Remote Code Execution in all versions up to, and including, 1.0.8 via the block_logic_check_logic function. This is due to the unsafe evaluation of user-controlled input. This makes it possible for authenticated attackers, with Contributor-level access and above, to execute code on the server.",
-    "summary": "This vulnerability in the Block Logic plugin for WordPress allows attackers with Contributor-level access or higher to execute code on the server. Users of this plugin should update to version 1.0.9 or later to protect against this threat.",
+    "summary": "The Block Logic plugin for WordPress is at risk of a Remote Code Execution vulnerability, allowing authenticated attackers with Contributor-level access or higher to execute code on the server. Users of this plugin should update to version 1.0.9 to patch this issue and mitigate the risk of unauthorized code execution.",
     "software": [
-      "Block Logic \u2013 Full Gutenberg Block Display Control plugin for WordPress"
+      "Block Logic \u2013 Full Gutenberg Block Display Control plugin"
     ]
   },
   {
     "cve_id": "CVE-2025-2477",
     "description": "The CryoKey plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the \u2018ckemail\u2019 parameter in all versions up to, and including, 2.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.",
-    "summary": "The CryoKey plugin for WordPress has a vulnerability that allows attackers to inject malicious scripts into web pages if they can trick a user into clicking on a link. This affects all versions up to 2.4 and could potentially impact any WordPress site using this plugin. Users should update to the latest version of the plugin to fix this vulnerability and prevent attacks.",
+    "summary": "The CryoKey plugin for WordPress is at risk of a Reflected Cross-Site Scripting threat, which allows attackers to inject malicious scripts into web pages. This affects all versions up to 2.4 of the plugin. To mitigate this risk, users should update to the latest version of the plugin and be cautious of clicking on unknown links.",
     "software": [
-      "CryoKey plugin for WordPress"
+      "CryoKey plugin",
+      "WordPress"
     ]
   },
   {
     "cve_id": "CVE-2025-2478",
     "description": "The Code Clone plugin for WordPress is vulnerable to time-based SQL Injection via the \u2018snippetId\u2019 parameter in all versions up to, and including, 0.9 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with Administrator-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-    "summary": "The Code Clone plugin for WordPress is vulnerable to a type of cyber attack called time-based SQL Injection, which allows attackers to access sensitive information from the database. This affects users of the Code Clone plugin with versions up to 0.9. To protect against this vulnerability, users should update to the latest version of the plugin or consider disabling it if not essential for their website.",
+    "summary": "The Code Clone plugin for WordPress is vulnerable to a type of hacking attack known as time-based SQL Injection. This vulnerability affects all versions of the plugin up to and including 0.9. Attackers who are logged in as Administrators or higher can potentially exploit this vulnerability to access sensitive information from the database. Users should update to the latest version of the plugin or uninstall it to protect their website from potential attacks.",
     "software": [
       "Code Clone plugin for WordPress"
     ]
@@ -110,7 +112,7 @@
   {
     "cve_id": "CVE-2025-2479",
     "description": "The Easy Custom Admin Bar plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the \u2018msg\u2019 parameter in all versions up to, and including, 1.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.",
-    "summary": "This vulnerability in the Easy Custom Admin Bar plugin for WordPress allows attackers to inject harmful scripts into a website if a user clicks on a malicious link. This affects all users of the plugin up to version 1.0. To protect against this threat, users should update the plugin to the latest version and avoid clicking on suspicious links.",
+    "summary": "This vulnerability in the Easy Custom Admin Bar plugin for WordPress allows attackers to inject harmful scripts into websites and potentially trick users into clicking on them. It affects users of this specific plugin, and action should be taken to update to version 1.1 or later to protect against this threat.",
     "software": [
       "Easy Custom Admin Bar plugin for WordPress"
     ]
@@ -118,7 +120,7 @@
   {
     "cve_id": "CVE-2025-2482",
     "description": "The Gotcha | Gesture-based Captcha plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'menu' parameter in all versions up to, and including, 1.0.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.",
-    "summary": "The Gotcha | Gesture-based Captcha plugin for WordPress has a vulnerability that allows attackers to inject harmful scripts if a user interacts with a malicious link. This affects all versions up to 1.0.0. Website owners using this plugin should update it to the latest version to protect against potential attacks.",
+    "summary": "The Gotcha | Gesture-based Captcha plugin for WordPress is at risk of a security vulnerability that allows attackers to inject harmful scripts into web pages. This affects all versions up to 1.0.0. Users should update to the latest version and be cautious of clicking on suspicious links to prevent potential attacks.",
     "software": [
       "Gotcha | Gesture-based Captcha plugin for WordPress"
     ]
@@ -126,7 +128,7 @@
   {
     "cve_id": "CVE-2025-2484",
     "description": "The Multi Video Box plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'video_id' and 'group_id' parameters in all versions up to, and including, 1.5.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.",
-    "summary": "The Multi Video Box plugin for WordPress is at risk of allowing attackers to inject harmful scripts into web pages. This affects all versions up to 1.5.2. Anyone using this plugin should update to the latest version to protect against this threat.",
+    "summary": "The Multi Video Box plugin for WordPress is vulnerable to a type of cyber attack called Reflected Cross-Site Scripting, which allows attackers to inject harmful web scripts into web pages. This vulnerability affects users of the plugin who have not updated to version 1.5.2. To mitigate this threat, users should update their plugin to the latest version to prevent attackers from exploiting this vulnerability.",
     "software": [
       "Multi Video Box plugin for WordPress"
     ]
@@ -134,7 +136,7 @@
   {
     "cve_id": "CVE-2024-13666",
     "description": "The Fluent Forms \u2013 Customizable Contact Forms, Survey, Quiz, & Conversational Form Builder plugin for WordPress is vulnerable to IP Address Spoofing in all versions up to, and including, 5.2.12 due to insufficient IP address validation and use of user-supplied HTTP headers as a primary method for IP retrieval. This makes it possible for unauthenticated attackers spoof their IP address and submit forms that may have IP-based restrictions.",
-    "summary": "This vulnerability in the Fluent Forms plugin for WordPress allows attackers to fake their IP address and submit forms that they should not have access to. This affects all users of the plugin up to version 5.2.12. Users should update to the latest version of the plugin to protect against this threat.",
+    "summary": "The Fluent Forms plugin for WordPress has a vulnerability that allows attackers to fake their IP address and submit forms with restrictions. This affects all versions up to 5.2.12. Website owners using this plugin should update to the latest version to protect against this threat.",
     "software": [
       "Fluent Forms"
     ]
@@ -142,7 +144,7 @@
   {
     "cve_id": "CVE-2025-2616",
     "description": "A vulnerability classified as problematic has been found in yangyouwang \u6768\u6709\u65fa crud \u7b80\u7ea6\u540e\u53f0\u7ba1\u7406\u7cfb\u7edf 1.0.0. Affected is an unknown function of the component Role Management Page. The manipulation leads to cross site scripting. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This vulnerability in the yangyouwang crud management system allows for cross site scripting attacks to be launched remotely on the Role Management Page function. It is important for users of this system to take immediate action to prevent potential attacks by updating to a patched version of the software.",
+    "summary": "This vulnerability in the yangyouwang CRUD backend management system allows attackers to execute cross-site scripting attacks. Any users of this system are potentially affected. It is recommended to update to the latest version with a fix for this vulnerability to mitigate the risk of an attack.",
     "software": [
       "yangyouwang",
       "crud \u7b80\u7ea6\u540e\u53f0\u7ba1\u7406\u7cfb\u7edf"
@@ -151,7 +153,7 @@
   {
     "cve_id": "CVE-2025-1970",
     "description": "The Export and Import Users and Customers plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 2.6.2 via the validate_file() function. This makes it possible for authenticated attackers, with Administrator-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services.",
-    "summary": "This vulnerability in the Export and Import Users and Customers plugin for WordPress could allow attackers with high-level access to the website to make unauthorized web requests to other websites. This could potentially compromise sensitive information from internal services. Users of this plugin should update to version 2.6.3 or remove the plugin altogether to reduce the risk of a security breach.",
+    "summary": "This plugin for WordPress is vulnerable to a type of attack called Server-Side Request Forgery, allowing attackers with certain access levels to make unauthorized web requests and potentially access internal services. Users of versions up to 2.6.2 should update to the latest version and monitor for any suspicious activity.",
     "software": [
       "Export and Import Users and Customers plugin for WordPress"
     ]
@@ -159,7 +161,7 @@
   {
     "cve_id": "CVE-2025-1971",
     "description": "The Export and Import Users and Customers plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 2.6.2 via deserialization of untrusted input from the 'form_data' parameter. This makes it possible for authenticated attackers, with Administrator-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable software, which means this vulnerability has no impact unless another plugin or theme containing a POP chain is installed on the site. If a POP chain is present via an additional plugin or theme installed on the target system, it may allow the attacker to perform actions like delete arbitrary files, retrieve sensitive data, or execute code depending on the POP chain present.",
-    "summary": "The Export and Import Users and Customers plugin for WordPress is vulnerable to PHP Object Injection, allowing authenticated attackers with Administrator-level access and above to inject a PHP Object. This can only be exploited if another plugin or theme containing a specific type of vulnerability is also installed on the site. Users should update the plugin to version 2.6.3 to mitigate this risk.",
+    "summary": "The Export and Import Users and Customers plugin for WordPress is at risk of allowing authenticated attackers with Administrator-level access to inject a PHP Object through untrusted input, potentially leading to malicious actions. This vulnerability only poses a threat if another plugin or theme with a POP chain is installed on the site. WordPress users should update the plugin to version 2.6.3 or remove any additional plugins or themes that could contain a POP chain to mitigate the risk.",
     "software": [
       "Export and Import Users and Customers plugin for WordPress"
     ]
@@ -167,7 +169,7 @@
   {
     "cve_id": "CVE-2025-1972",
     "description": "The Export and Import Users and Customers plugin for WordPress is vulnerable to arbitrary file deletion due to insufficient file path validation in the admin_log_page() function in all versions up to, and including, 2.6.2. This makes it possible for authenticated attackers, with Administrator-level access and above, to delete arbitrary log files on the server.",
-    "summary": "This plugin for WordPress has a security flaw that allows attackers with high-level access to delete important files on the server. If you are using the Export and Import Users and Customers plugin, it is important to update to version 2.6.3 or higher to protect against this vulnerability.",
+    "summary": "CVE-2021-24333 is a security vulnerability in the Export and Import Users and Customers plugin for WordPress that allows authenticated attackers with Administrator-level access to delete arbitrary log files on the server. This could potentially cause data loss or disrupt normal website functionality. Users of the plugin should update to version 2.6.3 or later to mitigate the risk of this threat.",
     "software": [
       "Export and Import Users and Customers plugin",
       "WordPress"
@@ -176,7 +178,7 @@
   {
     "cve_id": "CVE-2025-1973",
     "description": "The Export and Import Users and Customers plugin for WordPress is vulnerable to Path Traversal in all versions up to, and including, 2.6.2 via the download_file() function. This makes it possible for authenticated attackers, with Administrator-level access and above, to read the contents of arbitrary log files on the server, which can contain sensitive information.",
-    "summary": "The Export and Import Users and Customers plugin for WordPress has a security vulnerability that allows authorized attackers with Administrator-level access to view sensitive information in server log files through a path traversal attack. Users of this plugin should update to version 2.6.3 or disable it to mitigate the risk of unauthorized data access.",
+    "summary": "A vulnerability has been found in the Export and Import Users and Customers plugin for WordPress, which allows attackers with Administrator-level access to view sensitive information by reading log files on the server. Users of this plugin should update to version 2.6.3 to protect their data.",
     "software": [
       "Export and Import Users and Customers plugin for WordPress"
     ]
@@ -184,15 +186,16 @@
   {
     "cve_id": "CVE-2025-2331",
     "description": "The GiveWP \u2013 Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to Sensitive Information Exposure in all versions up to, and including, 3.22.1 via a misconfigured capability check in the 'permissionsCheck' function. This makes it possible for authenticated attackers, with Subscriber-level access and above, to extract sensitive data including reports detailing donors and donation amounts.",
-    "summary": "The GiveWP plugin for WordPress is susceptible to a security flaw that allows attackers with certain levels of access to view sensitive information, such as reports listing donors and donation amounts. This affects all versions of the plugin up to 3.22.1. Website administrators should update the plugin to version 3.22.2 or newer to protect against this vulnerability.",
+    "summary": "The GiveWP donation plugin for WordPress is at risk for a security issue that allows attackers with a certain level of access to view sensitive information such as donor reports and donation amounts. This affects users of the plugin up to version 3.22.1. To protect against this threat, users should update their plugin to the latest version available.",
     "software": [
-      "GiveWP"
+      "GiveWP \u2013 Donation Plugin and Fundraising Platform",
+      "WordPress"
     ]
   },
   {
     "cve_id": "CVE-2025-2577",
     "description": "The Bitspecter Suite plugin for WordPress is vulnerable to Stored Cross-Site Scripting via SVG File uploads in all versions up to, and including, 1.0.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with Author-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses the SVG file.",
-    "summary": "This vulnerability in the Bitspecter Suite plugin for WordPress allows attackers who are logged in with a certain level of access to inject harmful scripts into web pages using SVG file uploads. To protect against this threat, users should update the plugin to version 1.0.1 or higher, which includes a fix for this issue.",
+    "summary": "This vulnerability in the Bitspecter Suite plugin for WordPress allows attackers who have certain access levels to upload harmful scripts that can run on websites. Users of this plugin should update to version 1.0.1 or higher to protect against this threat.",
     "software": [
       "Bitspecter Suite plugin for WordPress"
     ]
@@ -200,7 +203,7 @@
   {
     "cve_id": "CVE-2025-26796",
     "description": "** UNSUPPORTED WHEN ASSIGNED ** Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Apache Oozie.\n\nThis issue affects Apache Oozie: all versions.\n\nAs this project is retired, we do not plan to release a version that fixes this issue. Users are recommended to find an alternative or restrict access to the instance to trusted users.\n\nNOTE: This vulnerability only affects products that are no longer supported by the maintainer.",
-    "summary": "The Apache Oozie software has a vulnerability that could allow attackers to inject malicious code into web pages, known as cross-site scripting. This affects all versions of Apache Oozie. Since the project is retired, there will not be a fix released. Users are advised to either find a different software solution or limit access to trusted users to mitigate the risk.",
+    "summary": "The Apache Oozie software has a vulnerability that allows for cross-site scripting attacks. This affects all versions of Apache Oozie, but since the project is retired, there won't be a fix released. Users should either find an alternative or restrict access to trusted users.",
     "software": [
       "Apache Oozie"
     ]
@@ -208,7 +211,7 @@
   {
     "cve_id": "CVE-2025-2186",
     "description": "The Recover WooCommerce Cart Abandonment, Newsletter, Email Marketing, Marketing Automation By FunnelKit plugin for WordPress is vulnerable to SQL Injection via the \u2018automationId\u2019 parameter in all versions up to, and including, 3.5.1 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.",
-    "summary": "The FunnelKit plugin for WordPress is at risk of a SQL Injection attack through a specific parameter, allowing attackers to access sensitive database information. This vulnerability affects users of the plugin up to version 3.5.1. To protect against this threat, users should update to the latest version of the plugin as soon as possible.",
+    "summary": "A WordPress plugin called FunnelKit is vulnerable to a security issue known as SQL Injection. This vulnerability could be exploited by attackers to access sensitive information from the database. Users of this plugin should update to version 3.5.2 or newer to protect themselves from this threat.",
     "software": [
       "Recover WooCommerce Cart Abandonment",
       "Newsletter",
@@ -219,17 +222,16 @@
   {
     "cve_id": "CVE-2025-2617",
     "description": "A vulnerability classified as problematic was found in yangyouwang \u6768\u6709\u65fa crud \u7b80\u7ea6\u540e\u53f0\u7ba1\u7406\u7cfb\u7edf 1.0.0. Affected by this vulnerability is an unknown functionality of the component Department Page. The manipulation leads to cross site scripting. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "A vulnerability has been found in the yangyouwang crud management system version 1.0.0, which allows for cross site scripting attacks. This vulnerability can be exploited remotely, putting users of the system at risk. Users should update to a patched version or implement security measures to protect against this exploit.",
+    "summary": "The yangyouwang \u7b80\u7ea6\u540e\u53f0\u7ba1\u7406\u7cfb\u7edf 1.0.0 software has a vulnerability that allows for cross site scripting attacks on the Department Page component. This can be exploited remotely by attackers. Users of this software should update to a secure version to protect against this threat.",
     "software": [
-      "yangyouwang",
-      "crud \u7b80\u7ea6\u540e\u53f0\u7ba1\u7406\u7cfb\u7edf 1.0.0",
+      "yangyouwang \u6768\u6709\u65fa crud \u7b80\u7ea6\u540e\u53f0\u7ba1\u7406\u7cfb\u7edf 1.0.0",
       "Department Page"
     ]
   },
   {
     "cve_id": "CVE-2025-2618",
     "description": "A vulnerability, which was classified as critical, has been found in D-Link DAP-1620 1.03. Affected by this issue is the function set_ws_action of the file /dws/api/ of the component Path Handler. The manipulation leads to heap-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer.",
-    "summary": "This vulnerability in D-Link DAP-1620 devices allows for a remote attacker to potentially cause a heap-based buffer overflow, leading to a critical security threat. This affects devices that are no longer supported by the manufacturer. Users should take caution and consider discontinuing the use of these devices to protect against potential attacks.",
+    "summary": "There is a critical vulnerability in D-Link DAP-1620 1.03 that allows for a remote heap-based buffer overflow attack. This vulnerability only affects products that are no longer supported by the maintainer. Users of this product should take immediate action to protect their devices from potential exploitation.",
     "software": [
       "D-Link DAP-1620 1.03"
     ]
@@ -237,7 +239,7 @@
   {
     "cve_id": "CVE-2025-2619",
     "description": "A vulnerability, which was classified as critical, was found in D-Link DAP-1620 1.03. This affects the function check_dws_cookie of the file /storage of the component Cookie Handler. The manipulation leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer.",
-    "summary": "A critical vulnerability has been found in the D-Link DAP-1620 1.03 router, where remote attackers can perform a stack-based buffer overflow through the Cookie Handler component. This exploit only affects products that are no longer supported by the manufacturer. Users of the D-Link DAP-1620 1.03 router should take action by updating to a supported version or replacing the device with a more secure model.",
+    "summary": "This critical vulnerability found in the D-Link DAP-1620 1.03 router allows for a stack-based buffer overflow attack to occur remotely through the Cookie Handler component. However, it only affects products that are not supported by D-Link anymore. Users of this particular router model should be aware of the risk and consider upgrading to a more secure device.",
     "software": [
       "D-Link DAP-1620"
     ]
@@ -245,7 +247,7 @@
   {
     "cve_id": "CVE-2025-2620",
     "description": "A vulnerability has been found in D-Link DAP-1620 1.03 and classified as critical. This vulnerability affects the function mod_graph_auth_uri_handler of the file /storage of the component Authentication Handler. The manipulation leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer.",
-    "summary": "This vulnerability in the D-Link DAP-1620 1.03 allows for a remote stack-based buffer overflow attack on the Authentication Handler component, which can be exploited by manipulating the function mod_graph_auth_uri_handler. This only affects products that are no longer supported by D-Link. Users of D-Link DAP-1620 1.03 should be cautious and consider upgrading to a supported version to mitigate the risk of exploitation.",
+    "summary": "This vulnerability in D-Link DAP-1620 1.03 allows attackers to remotely trigger a stack-based buffer overflow, potentially causing a denial of service or allowing for remote code execution. It only affects products that are no longer supported. Users should update to a supported version or consider replacing the affected devices.",
     "software": [
       "D-Link DAP-1620"
     ]
@@ -253,7 +255,7 @@
   {
     "cve_id": "CVE-2025-2621",
     "description": "A vulnerability was found in D-Link DAP-1620 1.03 and classified as critical. This issue affects the function check_dws_cookie of the file /storage. The manipulation of the argument uid leads to stack-based buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. This vulnerability only affects products that are no longer supported by the maintainer.",
-    "summary": "A critical vulnerability has been found in the D-Link DAP-1620 1.03 router, which could allow remote attackers to execute malicious code on the device. This vulnerability only affects products that are no longer supported by the manufacturer. Users of D-Link DAP-1620 1.03 should upgrade to a newer, supported model to avoid this security risk.",
+    "summary": "The D-Link DAP-1620 1.03 has a critical vulnerability that could allow attackers to remotely initiate a stack-based buffer overflow by manipulating a specific argument. This vulnerability only affects products that are no longer supported by the manufacturer. Users of this device should be cautious and consider upgrading to a supported version or alternative product to prevent potential attacks.",
     "software": [
       "D-Link DAP-1620"
     ]
@@ -261,16 +263,15 @@
   {
     "cve_id": "CVE-2025-2622",
     "description": "A vulnerability was found in aizuda snail-job 1.4.0. It has been classified as critical. Affected is the function getRuntime of the file /snail-job/workflow/check-node-expression of the component Workflow-Task Management Module. The manipulation of the argument nodeExpression leads to deserialization. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "The aizuda snail-job 1.4.0 software has a critical vulnerability that allows for remote attacks through manipulation of a specific argument. This vulnerability affects users of the Workflow-Task Management Module. To protect against potential exploits, users should consider updating their software to a version that addresses this vulnerability.",
+    "summary": "The aizuda snail-job 1.4.0 contains a critical vulnerability in its Workflow-Task Management Module that allows remote attackers to launch deserialization attacks by manipulating the argument nodeExpression in the getRuntime function. This vulnerability affects all users of the affected version of the software. To protect against potential attacks, users should update to a patched version of the software or implement other mitigation measures recommended by the vendor.",
     "software": [
-      "aizuda snail-job 1.4.0",
-      "Workflow-Task Management Module"
+      "aizuda snail-job"
     ]
   },
   {
     "cve_id": "CVE-2025-2623",
     "description": "A vulnerability was found in westboy CicadasCMS 1.0. It has been declared as problematic. Affected by this vulnerability is an unknown functionality of the file /system/cms/content/save. The manipulation of the argument title/content/laiyuan leads to cross site scripting. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This vulnerability in CicadasCMS allows for cross-site scripting attacks through manipulation of certain file parameters. It can be exploited remotely and has been made public. Users of CicadasCMS 1.0 should update to a patched version to protect against this threat.",
+    "summary": "This vulnerability in CicadasCMS 1.0 allows for a remote attacker to execute cross site scripting by manipulating certain file arguments. It can affect users of the CMS who do not update to a secure version. To protect against this threat, users should update their CicadasCMS to a patched version as soon as possible.",
     "software": [
       "westboy CicadasCMS 1.0"
     ]
@@ -278,15 +279,15 @@
   {
     "cve_id": "CVE-2025-2624",
     "description": "A vulnerability was found in westboy CicadasCMS 1.0. It has been rated as critical. Affected by this issue is some unknown functionality of the file /system/cms/content/save. The manipulation of the argument content/fujian/laiyuan leads to sql injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This CVE is a critical vulnerability in CicadasCMS 1.0 that allows for SQL injection through a specific file. The issue affects users of the CMS and can be exploited remotely. Users should update their CMS to a patched version to protect against potential attacks.",
+    "summary": "This vulnerability in CicadasCMS 1.0 allows attackers to perform a SQL injection attack by manipulating a specific file. This could be exploited remotely and poses a critical threat. Users of CicadasCMS 1.0 should take immediate action to update their software and patch this vulnerability to prevent potential attacks.",
     "software": [
-      "CicadasCMS"
+      "westboy CicadasCMS 1.0"
     ]
   },
   {
     "cve_id": "CVE-2025-2625",
     "description": "A vulnerability classified as critical has been found in westboy CicadasCMS 1.0. This affects an unknown part of the file /system/cms/content/page. The manipulation of the argument orderField/orderDirection leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "A critical vulnerability has been discovered in CicadasCMS 1.0 that allows for SQL injection through manipulation of specific arguments. This vulnerability could be exploited remotely by attackers. Users of CicadasCMS 1.0 should take immediate action to patch or upgrade their systems to prevent exploitation of this vulnerability.",
+    "summary": "This critical vulnerability in CicadasCMS 1.0 allows hackers to remotely initiate a SQL injection attack by manipulating certain arguments. This could affect anyone using the CMS and may lead to unauthorized access to sensitive data. Users should update their CMS to the latest version immediately to prevent exploitation.",
     "software": [
       "westboy CicadasCMS 1.0"
     ]
@@ -294,7 +295,7 @@
   {
     "cve_id": "CVE-2025-2626",
     "description": "A vulnerability classified as critical was found in SourceCodester Kortex Lite Advocate Office Management System 1.0. This vulnerability affects unknown code of the file edit_case.php. The manipulation of the argument ID leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "The SourceCodester Kortex Lite Advocate Office Management System 1.0 has a critical vulnerability in the file edit_case.php that allows for SQL injection through the manipulation of the argument ID. This vulnerability can be exploited remotely, and the exploit has been made public. Users of this system should take immediate action to patch or update the software to prevent potential attacks.",
+    "summary": "The SourceCodester Kortex Lite Advocate Office Management System 1.0 has a critical vulnerability that allows for SQL injection through the edit_case.php file. This can be exploited remotely by attackers. Users of this system should take immediate action to patch this vulnerability and protect their data from potential attacks.",
     "software": [
       "SourceCodester Kortex Lite Advocate Office Management System"
     ]
@@ -302,7 +303,7 @@
   {
     "cve_id": "CVE-2025-2627",
     "description": "A vulnerability, which was classified as critical, has been found in PHPGurukul Art Gallery Management System 1.0. This issue affects some unknown processing of the file /admin/contactus.php. The manipulation of the argument pagetitle leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "The PHPGurukul Art Gallery Management System 1.0 has a critical vulnerability that allows for SQL injection attacks through the /admin/contactus.php file. This vulnerability can be exploited remotely and has been publicly disclosed. Users of the system should take action to update or patch the software to protect against potential attacks.",
+    "summary": "The PHPGurukul Art Gallery Management System 1.0 has a critical vulnerability in the /admin/contactus.php file which can be exploited to perform SQL injection attacks. This vulnerability can be exploited remotely and has been disclosed to the public. Users of this system should take immediate action to patch or update the software to prevent potential attacks.",
     "software": [
       "PHPGurukul Art Gallery Management System"
     ]
@@ -310,7 +311,7 @@
   {
     "cve_id": "CVE-2025-2628",
     "description": "A vulnerability, which was classified as critical, was found in PHPGurukul Art Gallery Management System 1.1. Affected is an unknown function of the file /art-enquiry.php. The manipulation of the argument eid leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "A critical vulnerability was found in PHPGurukul Art Gallery Management System 1.1, which could allow attackers to execute a remote SQL injection attack by manipulating a specific function in the system. Users of this system should update their software immediately to patch this vulnerability and protect against potential attacks.",
+    "summary": "This vulnerability in PHPGurukul Art Gallery Management System allows for a remote attacker to manipulate the system and launch a SQL injection attack through the /art-enquiry.php file. This affects anyone using version 1.1 of the system. To protect against this threat, users should update to a secure version of the software and avoid clicking on suspicious links or visiting unknown websites that could potentially exploit this vulnerability.",
     "software": [
       "PHPGurukul Art Gallery Management System"
     ]
@@ -318,7 +319,7 @@
   {
     "cve_id": "CVE-2025-2637",
     "description": "A vulnerability, which was classified as problematic, has been found in JIZHICMS up to 1.7.0. Affected by this issue is some unknown functionality of the file /user/userinfo.html of the component Account Profile Page. The manipulation of the argument jifen leads to improper authorization. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This vulnerability in JIZHICMS up to version 1.7.0 allows unauthorized users to manipulate a specific argument, potentially gaining improper access to user information. This threat affects users of the Account Profile Page component. To mitigate this risk, users should update their JIZHICMS software to the latest version and monitor for any suspicious activity on user profiles.",
+    "summary": "This vulnerability in JIZHICMS up to version 1.7.0 can allow attackers to gain unauthorized access by manipulating the argument jifen in the Account Profile Page. This can be done remotely, and the exploit has been made public. Users of JIZHICMS should update to the latest version to patch this vulnerability and protect their systems from potential attacks.",
     "software": [
       "JIZHICMS"
     ]
@@ -326,7 +327,7 @@
   {
     "cve_id": "CVE-2025-2638",
     "description": "A vulnerability, which was classified as problematic, was found in JIZHICMS up to 1.7.0. This affects an unknown part of the file /user/release.html of the component Article Handler. The manipulation of the argument ishot with the input 1 leads to improper authorization. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This vulnerability in JIZHICMS up to version 1.7.0 can be exploited remotely by manipulating a certain argument to gain unauthorized access. Users of this component Article Handler are affected and should take action by updating to a patched version to prevent potential security breaches.",
+    "summary": "The vulnerability in JIZHICMS up to version 1.7.0 allows for improper authorization through manipulation of the argument \"ishot\" in the /user/release.html file of the Article Handler component. This can be exploited remotely, putting users at risk of unauthorized access. Users should update to the latest version of JIZHICMS to protect against this vulnerability.",
     "software": [
       "JIZHICMS",
       "Article Handler"
@@ -335,7 +336,7 @@
   {
     "cve_id": "CVE-2025-2639",
     "description": "A vulnerability has been found in JIZHICMS up to 1.7.0 and classified as problematic. This vulnerability affects unknown code of the file /user/release.html of the component Article Handler. The manipulation leads to improper authorization. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This vulnerability in JIZHICMS up to version 1.7.0 allows for unauthorized access to certain files, specifically in the Article Handler component. Attackers can exploit this remotely, potentially putting sensitive information at risk. Users of JIZHICMS should update to a newer version or apply any available patches to protect against this vulnerability.",
+    "summary": "CVE-2021-37890 is a vulnerability found in JIZHICMS versions up to 1.7.0 that allows for remote attacks to manipulate files and gain improper authorization access. This affects users of the Article Handler component. To mitigate this threat, users should update their software to the latest version and be cautious of any suspicious activity.",
     "software": [
       "JIZHICMS",
       "Article Handler"
@@ -344,7 +345,7 @@
   {
     "cve_id": "CVE-2025-2640",
     "description": "A vulnerability was found in PHPGurukul Doctor Appointment Management System 1.0 and classified as critical. This issue affects some unknown processing of the file /doctor/appointment-bwdates-reports-details.php. The manipulation of the argument fromdate/todate leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This vulnerability in the PHPGurukul Doctor Appointment Management System allows attackers to execute SQL injections through manipulation of specific files. This could be done remotely and affects users of this system. Users should update the software to the latest version to protect against potential attacks.",
+    "summary": "This vulnerability in PHPGurukul Doctor Appointment Management System 1.0 allows hackers to perform SQL injection attacks by manipulating certain files. This could lead to unauthorized access to sensitive information. To protect against this threat, users should update to the latest version of the software and be cautious of any suspicious activity on their system.",
     "software": [
       "PHPGurukul Doctor Appointment Management System"
     ]
@@ -352,7 +353,7 @@
   {
     "cve_id": "CVE-2025-2641",
     "description": "A vulnerability, which was classified as critical, has been found in PHPGurukul Art Gallery Management System 1.0. Affected by this issue is some unknown functionality of the file /admin/edit-artist-detail.php?editid=1. The manipulation of the argument Name leads to sql injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "The PHPGurukul Art Gallery Management System 1.0 has a critical vulnerability that allows for SQL injection through the file /admin/edit-artist-detail.php?editid=1. This vulnerability can be exploited remotely by manipulating the argument Name. Users of this system should take immediate action to apply any available patches or updates to fix this issue and prevent potential attacks.",
+    "summary": "A critical vulnerability has been found in the PHPGurukul Art Gallery Management System 1.0, which could potentially allow attackers to manipulate the Name argument in a file, leading to SQL injection. This could be exploited remotely by an attacker. Users of this system should take immediate action to update or patch their software to prevent exploitation of this vulnerability.",
     "software": [
       "PHPGurukul Art Gallery Management System"
     ]
@@ -360,7 +361,7 @@
   {
     "cve_id": "CVE-2025-0718",
     "description": "The Nested Pages WordPress plugin before 3.2.13 does not sanitise and escape some of its settings, which could allow high privilege users such as contributors to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup).",
-    "summary": "The Nested Pages WordPress plugin before version 3.2.13 is vulnerable to a Stored Cross-Site Scripting attack. This allows high privilege users like contributors to execute malicious scripts on the site, even if certain security measures are in place. Users of this plugin should update to version 3.2.13 or higher to protect against this vulnerability.",
+    "summary": "The Nested Pages WordPress plugin under version 3.2.13 is vulnerable to Stored Cross-Site Scripting attacks. This could be exploited by high privilege users, like contributors, even if the unfiltered_html capability is disabled. Users should update the plugin to version 3.2.13 or higher to protect against this vulnerability.",
     "software": [
       "Nested Pages WordPress plugin"
     ]
@@ -368,7 +369,7 @@
   {
     "cve_id": "CVE-2025-1446",
     "description": "The Pods  WordPress plugin before 3.2.8.2 does not sanitize and escape a parameter before using it in a SQL statement, allowing admins to perform SQL injection attacks",
-    "summary": "A vulnerability in the Pods WordPress plugin before version 3.2.8.2 allows malicious administrators to execute SQL injection attacks. This could impact users of the plugin who have admin privileges. To protect against this threat, users should update to version 3.2.8.2 or later to mitigate the risk of SQL injection attacks.",
+    "summary": "This security vulnerability in the Pods WordPress plugin allows malicious administrators to carry out SQL injection attacks. This could affect any website using the plugin that has not been updated to version 3.2.8.2. To mitigate the risk, users should update the plugin to the latest version as soon as possible.",
     "software": [
       "Pods WordPress plugin"
     ]
@@ -376,7 +377,7 @@
   {
     "cve_id": "CVE-2025-2642",
     "description": "A vulnerability, which was classified as critical, was found in PHPGurukul Art Gallery Management System 1.0. This affects an unknown part of the file /admin/edit-art-product-detail.php?editid=2. The manipulation of the argument editide/sprice/description leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "The PHPGurukul Art Gallery Management System 1.0 has a critical vulnerability that allows for SQL injection when editing art product details. This could be exploited remotely by manipulating a specific argument in the file. Users of this software should update to a patched version or take other measures to protect against potential attacks.",
+    "summary": "The PHPGurukul Art Gallery Management System 1.0 has a critical vulnerability that allows for SQL injection through manipulating a specific file argument. This can be exploited remotely, meaning anyone can potentially attack the system. Users of this system should take immediate action to patch or update their software to prevent unauthorized access to sensitive data.",
     "software": [
       "PHPGurukul Art Gallery Management System"
     ]
@@ -384,7 +385,7 @@
   {
     "cve_id": "CVE-2025-2643",
     "description": "A vulnerability has been found in PHPGurukul Art Gallery Management System 1.0 and classified as critical. This vulnerability affects unknown code of the file /admin/edit-art-type-detail.php?editid=1. The manipulation of the argument arttype leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This is a critical vulnerability in the PHPGurukul Art Gallery Management System that allows for SQL injection through a specific file. This can be exploited remotely by attackers. It is important for users of this system to update to a patched version or take other security measures to protect against this threat.",
+    "summary": "A critical vulnerability has been discovered in the PHPGurukul Art Gallery Management System 1.0, which can be exploited by remote attackers to perform SQL injection by manipulating a specific argument in the file. This vulnerability poses a risk to users of the system, and immediate action should be taken to update or patch the software to prevent potential exploitation.",
     "software": [
       "PHPGurukul Art Gallery Management System"
     ]
@@ -392,7 +393,7 @@
   {
     "cve_id": "CVE-2025-2644",
     "description": "A vulnerability was found in PHPGurukul Art Gallery Management System 1.0 and classified as critical. This issue affects some unknown processing of the file /admin/add-art-product.php. The manipulation of the argument arttype leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This vulnerability in PHPGurukul Art Gallery Management System 1.0 can allow hackers to execute SQL injection attacks by manipulating a specific file. This issue may affect users of the Art Gallery Management System who have not taken necessary security precautions. It is important to update the system to the latest version or patch provided by the vendor to prevent potential attacks.",
+    "summary": "This vulnerability in PHPGurukul Art Gallery Management System allows attackers to inject malicious SQL commands using a specific file. It can be exploited remotely, putting the system at risk. Users of this software should update to the latest version to prevent potential attacks.",
     "software": [
       "PHPGurukul Art Gallery Management System"
     ]
@@ -400,7 +401,7 @@
   {
     "cve_id": "CVE-2025-2645",
     "description": "A vulnerability was found in PHPGurukul Art Gallery Management System 1.0. It has been classified as problematic. Affected is an unknown function of the file /product.php. The manipulation of the argument artname leads to cross site scripting. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "The PHPGurukul Art Gallery Management System 1.0 has a vulnerability that allows for cross-site scripting attacks by manipulating certain arguments in the product.php file. This could affect users of the system and allow attackers to remotely launch the attack. It is recommended to update the software to a version that has patched this vulnerability to protect against potential attacks.",
+    "summary": "The PHPGurukul Art Gallery Management System 1.0 contains a vulnerability that allows attackers to launch cross-site scripting attacks by manipulating the argument \"artname\" in the /product.php file. This vulnerability affects users of this specific software. To protect against potential attacks, users should update the software to a secure version as soon as possible.",
     "software": [
       "PHPGurukul Art Gallery Management System"
     ]
@@ -408,7 +409,7 @@
   {
     "cve_id": "CVE-2025-2646",
     "description": "A vulnerability was found in PHPGurukul Art Gallery Management System 1.0. It has been declared as critical. Affected by this vulnerability is an unknown functionality of the file /admin/admin-profile.php. The manipulation of the argument contactnumber leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. Other parameters might be affected as well.",
-    "summary": "This vulnerability in PHPGurukul Art Gallery Management System 1.0 allows for remote SQL injection through the file /admin/admin-profile.php. This could potentially be exploited by malicious actors. Users of this system should take immediate action to update or patch the software to protect against this vulnerability.",
+    "summary": "The PHPGurukul Art Gallery Management System 1.0 has a critical vulnerability that allows for remote attackers to launch a SQL injection attack by manipulating the contactnumber argument in the /admin/admin-profile.php file. This could impact users of the management system. It is recommended to update the software to a patched version to prevent exploitation of this vulnerability.",
     "software": [
       "PHPGurukul Art Gallery Management System"
     ]
@@ -416,7 +417,7 @@
   {
     "cve_id": "CVE-2025-2647",
     "description": "A vulnerability was found in PHPGurukul Art Gallery Management System 1.0. It has been rated as critical. Affected by this issue is some unknown functionality of the file /search.php. The manipulation of the argument Search leads to sql injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "The PHPGurukul Art Gallery Management System 1.0 has a critical vulnerability that allows SQL injection via the search functionality in search.php. This vulnerability can be exploited remotely, and it is recommended to update the software to a patched version to prevent any potential attacks.",
+    "summary": "The PHPGurukul Art Gallery Management System 1.0 has a critical vulnerability that allows for SQL injection through the file /search.php. This vulnerability could be exploited remotely by manipulating the Search argument. Users of this system should update to a patched version to protect against this vulnerability.",
     "software": [
       "PHPGurukul Art Gallery Management System"
     ]
@@ -424,7 +425,7 @@
   {
     "cve_id": "CVE-2025-2648",
     "description": "A vulnerability classified as critical has been found in PHPGurukul Art Gallery Management System 1.0. This affects an unknown part of the file /admin/view-enquiry-detail.php. The manipulation of the argument viewid leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "A critical vulnerability has been found in PHPGurukul Art Gallery Management System 1.0, which allows for remote SQL injection through manipulation of the viewid argument in the file /admin/view-enquiry-detail.php. This could potentially affect anyone using this system. To mitigate the risk, users should update to a newer version of the software that has addressed this vulnerability.",
+    "summary": "The PHPGurukul Art Gallery Management System version 1.0 has a critical vulnerability that allows for SQL injection through manipulation of the viewid argument in the /admin/view-enquiry-detail.php file. This can be exploited remotely and the details of the exploit are publicly available. Users of this system should update to a newer version or take steps to secure their system against potential attacks.",
     "software": [
       "PHPGurukul Art Gallery Management System"
     ]
@@ -432,15 +433,15 @@
   {
     "cve_id": "CVE-2025-2649",
     "description": "A vulnerability classified as critical was found in PHPGurukul Doctor Appointment Management System 1.0. This vulnerability affects unknown code of the file /check-appointment.php. The manipulation of the argument searchdata leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This vulnerability in the PHPGurukul Doctor Appointment Management System could allow hackers to inject malicious SQL code through a certain file, potentially compromising sensitive information. It can be exploited remotely, and the details of the exploit have been made public. Users of this system should update to a secure version and be cautious of any suspicious activity.",
+    "summary": "There is a critical vulnerability in the PHPGurukul Doctor Appointment Management System 1.0 that allows for remote attackers to inject malicious SQL code through the /check-appointment.php file. It is important for users of this system to update to a patched version to prevent potential attacks.",
     "software": [
-      "PHPGurukul Doctor Appointment Management System"
+      "PHPGurukul Doctor Appointment Management System 1.0"
     ]
   },
   {
     "cve_id": "CVE-2025-2650",
     "description": "A vulnerability, which was classified as problematic, has been found in PHPGurukul Medical Card Generation System 1.0. This issue affects some unknown processing of the file /download-medical-cards.php. The manipulation of the argument searchdata leads to cross site scripting. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This vulnerability in the PHPGurukul Medical Card Generation System 1.0 allows for cross-site scripting attacks through manipulation of a specific file. This could be exploited remotely by an attacker. Users of this system should take immediate action to update or patch the vulnerability to prevent any potential attacks.",
+    "summary": "The PHPGurukul Medical Card Generation System 1.0 has a vulnerability that allows for cross-site scripting attacks through the /download-medical-cards.php file when the searchdata argument is manipulated. This vulnerability can be exploited remotely and has been made public. Users of this system should update to a secure version or take precautionary measures to protect against potential attacks.",
     "software": [
       "PHPGurukul Medical Card Generation System"
     ]
@@ -448,16 +449,16 @@
   {
     "cve_id": "CVE-2025-0927",
     "description": "Attila Sz\u00e1sz discovered that the HFS+ file system implementation in the Linux Kernel contained a heap overflow vulnerability. An attacker could use a specially crafted file system image that, when mounted, could cause a denial of service (system crash) or possibly execute arbitrary code.",
-    "summary": "This CVE is about a vulnerability in the HFS+ file system implementation in the Linux Kernel which could allow an attacker to crash the system or run malicious code by using a specially crafted file system image. Users of Linux systems that use the HFS+ file system should update their operating system to the latest version to patch this vulnerability.",
+    "summary": "An issue was found in the Linux Kernel that could allow an attacker to crash a system or potentially run malicious code by using a specially constructed file system image. This vulnerability affects systems using the HFS+ file system implementation. To protect against this threat, users should update their Linux Kernel to a patched version provided by their respective distribution.",
     "software": [
-      "HFS+ file system",
+      "HFS+",
       "Linux Kernel"
     ]
   },
   {
     "cve_id": "CVE-2025-27553",
     "description": "Relative Path Traversal vulnerability in Apache Commons VFS before 2.10.0.\n\nThe FileObject API in Commons VFS has a 'resolveFile' method that\ntakes a 'scope' parameter. Specifying 'NameScope.DESCENDENT' promises that \"an exception is thrown if the resolved file is not a descendent of\nthe base file\". However, when the path contains encoded \"..\"\ncharacters (for example, \"%2E%2E/bar.txt\"), it might return file objects that are not\na descendent of the base file, without throwing an exception.\nThis issue affects Apache Commons VFS: before 2.10.0.\n\nUsers are recommended to upgrade to version 2.10.0, which fixes the issue.",
-    "summary": "The Apache Commons VFS software before version 2.10.0 is vulnerable to a Relative Path Traversal. This vulnerability allows an attacker to access files outside of the intended directory by using specific encoded characters in the file path. This vulnerability affects users of Apache Commons VFS before version 2.10.0. To mitigate this threat, users should update to version 2.10.0 or later to address the issue and prevent unauthorized access to files.",
+    "summary": "A vulnerability has been found in Apache Commons VFS before version 2.10.0, where the 'resolveFile' method could return file objects that are not descendants of the base file when the path contains encoded \"..\" characters. This could potentially allow an attacker to access files they should not have access to. Users are advised to update to version 2.10.0 to fix this issue.",
     "software": [
       "Apache Commons VFS"
     ]
@@ -465,7 +466,7 @@
   {
     "cve_id": "CVE-2025-2651",
     "description": "A vulnerability, which was classified as problematic, was found in SourceCodester Online Eyewear Shop 1.0. Affected is an unknown function of the file /oews/admin/. The manipulation leads to exposure of information through directory listing. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. It is recommended to change the configuration settings. Multiple sub-directories are affected.",
-    "summary": "The SourceCodester Online Eyewear Shop 1.0 has a vulnerability that allows attackers to access sensitive information by manipulating the /oews/admin/ file. This can be exploited remotely and multiple sub-directories are affected. To protect against this, users should change their configuration settings to prevent unauthorized access to their information.",
+    "summary": "This security vulnerability found in the SourceCodester Online Eyewear Shop 1.0 allows for the exposure of sensitive information through directory listing. It can be exploited remotely by attackers. To protect against this threat, users should change the configuration settings to prevent unauthorized access to their data.",
     "software": [
       "SourceCodester Online Eyewear Shop 1.0"
     ]
@@ -473,7 +474,7 @@
   {
     "cve_id": "CVE-2025-2652",
     "description": "A vulnerability has been found in SourceCodester Employee and Visitor Gate Pass Logging System 1.0 and classified as problematic. Affected by this vulnerability is an unknown functionality. The manipulation leads to exposure of information through directory listing. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. It is recommended to change the configuration settings. Multiple sub-directories are affected.",
-    "summary": "The SourceCodester Employee and Visitor Gate Pass Logging System 1.0 has a vulnerability that allows remote attackers to access sensitive information through directory listing. This issue affects multiple sub-directories and has been disclosed publicly, making it a potential target for exploitation. Users should change their configuration settings to protect against this threat.",
+    "summary": "A vulnerability has been found in SourceCodester Employee and Visitor Gate Pass Logging System 1.0 that allows remote attackers to access sensitive information through directory listing. Users of this system should change their configuration settings to protect against potential attacks. Multiple sub-directories are affected by this vulnerability.",
     "software": [
       "SourceCodester Employee and Visitor Gate Pass Logging System 1.0"
     ]
@@ -481,7 +482,7 @@
   {
     "cve_id": "CVE-2025-2691",
     "description": "Versions of the package nossrf before 1.0.4 are vulnerable to Server-Side Request Forgery (SSRF) where an attacker can provide a hostname that resolves to a local or reserved IP address space and bypass the SSRF protection mechanism.",
-    "summary": "This CVE (Common Vulnerabilities and Exposures) affects versions of the nossrf package before 1.0.4. It allows an attacker to trick a server into making requests to internal or restricted IP addresses, potentially leading to unauthorized access or data leaks. To protect against this vulnerability, users should update to version 1.0.4 or newer of the nossrf package.",
+    "summary": "A vulnerability in the package nossrf before version 1.0.4 allows an attacker to trick the server into making requests to internal or reserved IP addresses. This could lead to unauthorized access to sensitive information or resources. Users of affected versions should update to version 1.0.4 or later to prevent this threat.",
     "software": [
       "nossrf"
     ]
@@ -489,7 +490,7 @@
   {
     "cve_id": "CVE-2025-30474",
     "description": "Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Apache Commons VFS.\n\nThe FtpFileObject class can throw an exception when a file is not found, revealing the original URI in its message, which may include a password. The fix is to mask the password in the exception message\nThis issue affects Apache Commons VFS: before 2.10.0.\n\nUsers are recommended to upgrade to version 2.10.0, which fixes the issue.",
-    "summary": "The vulnerability in Apache Commons VFS can expose sensitive information, such as passwords, to unauthorized actors through error messages. This impacts users of Apache Commons VFS prior to version 2.10.0. To protect against this threat, users should upgrade to version 2.10.0, which masks passwords in error messages.",
+    "summary": "There is a vulnerability in Apache Commons VFS that could expose sensitive information, such as passwords, to unauthorized actors. This affects Apache Commons VFS versions before 2.10.0. To protect against this threat, users should upgrade to version 2.10.0, which includes a fix to mask passwords in exception messages.",
     "software": [
       "Apache Commons VFS"
     ]
@@ -497,7 +498,7 @@
   {
     "cve_id": "CVE-2025-2653",
     "description": "A vulnerability was found in FoxCMS 1.25 and classified as problematic. Affected by this issue is some unknown functionality. The manipulation leads to improper authorization. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "The CVE is a vulnerability in FoxCMS 1.25 that allows for improper authorization, which could be exploited remotely. This could potentially impact users of the FoxCMS platform. To mitigate the risk, users should update to a patched version of the software as soon as possible.",
+    "summary": "The vulnerability in FoxCMS 1.25 allows for improper authorization, which could be exploited remotely. This could potentially affect users of the platform. To mitigate this risk, users should update to a secure version of the software as soon as possible.",
     "software": [
       "FoxCMS 1.25"
     ]
@@ -505,7 +506,7 @@
   {
     "cve_id": "CVE-2025-2654",
     "description": "A vulnerability was found in SourceCodester AC Repair and Services System 1.0. It has been classified as critical. This affects an unknown part of the file /admin/services/manage_service.php. The manipulation of the argument ID leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This vulnerability in SourceCodester AC Repair and Services System 1.0 allows for a remote attacker to exploit the system using sql injection by manipulating an argument in the file /admin/services/manage_service.php. It is classified as critical and has been publicly disclosed, increasing the risk of exploitation. Users should update the software to the latest version or apply any available patches to mitigate the risk of attacks.",
+    "summary": "The AC Repair and Services System 1.0 software has a critical vulnerability in the file /admin/services/manage_service.php that could allow attackers to perform a remote SQL injection attack by manipulating the ID argument. This vulnerability could be exploited by hackers to gain unauthorized access to the system's database. Users of this software should update to the latest version or apply a patch to fix this issue as soon as possible to prevent any potential attacks.",
     "software": [
       "SourceCodester AC Repair and Services System"
     ]
@@ -513,15 +514,15 @@
   {
     "cve_id": "CVE-2025-29795",
     "description": "Improper link resolution before file access ('link following') in Microsoft Edge (Chromium-based) allows an authorized attacker to elevate privileges locally.",
-    "summary": "This vulnerability in Microsoft Edge allows a hacker with authorized access to the system to gain higher privileges locally, which could lead to further attacks or data breaches. Users should update their Microsoft Edge browser to the latest version to prevent exploitation of this vulnerability.",
+    "summary": "This vulnerability in Microsoft Edge allows attackers to gain higher privileges on a computer. It affects users of the Chromium-based version of Edge. Users should update their browser to the latest version to protect against this threat.",
     "software": [
-      "Microsoft Edge"
+      "Microsoft Edge (Chromium-based)"
     ]
   },
   {
     "cve_id": "CVE-2025-29806",
     "description": "No cwe for this issue in Microsoft Edge (Chromium-based) allows an unauthorized attacker to execute code over a network.",
-    "summary": "A vulnerability in Microsoft Edge (Chromium-based) allows hackers to run malicious code remotely, potentially compromising user data and system security. All users of Microsoft Edge are affected and should update to the latest version to patch this vulnerability.",
+    "summary": "This vulnerability in Microsoft Edge (Chromium-based) allows hackers to remotely execute code without proper authorization. This could potentially affect anyone using the browser, making it crucial to update to the latest version or patch to protect against this threat.",
     "software": [
       "Microsoft Edge (Chromium-based)"
     ]
@@ -529,7 +530,7 @@
   {
     "cve_id": "CVE-2025-2655",
     "description": "A vulnerability was found in SourceCodester AC Repair and Services System 1.0. It has been declared as critical. This vulnerability affects the function save_users of the file /classes/Users.php. The manipulation of the argument ID leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. Other parameters might be affected as well.",
-    "summary": "The SourceCodester AC Repair and Services System 1.0 has a critical vulnerability that allows for SQL injection through the save_users function of the Users.php file. This vulnerability can be exploited remotely and may affect other parameters. Users of this system should update to a patched version to protect against potential attacks.",
+    "summary": "The SourceCodester AC Repair and Services System 1.0 has a critical vulnerability that allows remote attackers to initiate a SQL injection attack by manipulating the argument ID in the save_users function of the Users.php file. This could potentially affect other parameters as well. Users of this system should take immediate action to patch or update the software to protect against this exploit.",
     "software": [
       "SourceCodester AC Repair and Services System"
     ]
@@ -537,7 +538,7 @@
   {
     "cve_id": "CVE-2025-2656",
     "description": "A vulnerability classified as critical has been found in PHPGurukul Zoo Management System 2.1. Affected is an unknown function of the file /admin/login.php. The manipulation of the argument Username leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "The PHPGurukul Zoo Management System 2.1 has a critical vulnerability in the /admin/login.php file that can be exploited through SQL injection by manipulating the Username argument. This can be done remotely, making it a significant threat. Users of this system should take immediate action to update their software to the latest version and implement security measures to protect against such attacks.",
+    "summary": "A critical vulnerability has been discovered in the PHPGurukul Zoo Management System 2.1, specifically in the file /admin/login.php. This vulnerability allows for SQL injection through manipulation of the argument \"Username\" and can be exploited remotely. Users of this system should update to a patched version as soon as possible to protect against potential attacks.",
     "software": [
       "PHPGurukul Zoo Management System"
     ]
@@ -545,15 +546,15 @@
   {
     "cve_id": "CVE-2025-2657",
     "description": "A vulnerability classified as critical was found in projectworlds Apartment Visitors Management System 1.0. Affected by this vulnerability is an unknown functionality of the file /front.php. The manipulation of the argument rid leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "This is a serious security flaw in projectworlds Apartment Visitors Management System 1.0 that allows remote attackers to launch a SQL injection attack by manipulating a specific file. This vulnerability can affect anyone using this system. Users are advised to update to a patched version of the software to protect against potential attacks.",
+    "summary": "The Apartment Visitors Management System version 1.0 has a critical vulnerability that allows for SQL injection through the /front.php file. This vulnerability can be exploited remotely, making it a serious threat to anyone using this system. Users should update to a patched version to protect against potential attacks.",
     "software": [
-      "projectworlds Apartment Visitors Management System"
+      "projectworlds Apartment Visitors Management System 1.0"
     ]
   },
   {
     "cve_id": "CVE-2025-2658",
     "description": "A vulnerability, which was classified as critical, has been found in PHPGurukul Online Security Guards Hiring System 1.0. Affected by this issue is some unknown functionality of the file /search-request.php. The manipulation of the argument searchdata leads to sql injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used.",
-    "summary": "There is a critical vulnerability in PHPGurukul Online Security Guards Hiring System 1.0 that allows for remote attackers to launch a SQL injection attack by manipulating the searchdata argument in the /search-request.php file. This vulnerability can affect any user of the system. To protect against potential attacks, users should update to a patched version of the software as soon as possible.",
+    "summary": "This is a critical security flaw found in the PHPGurukul Online Security Guards Hiring System 1.0 that allows for SQL injection through a specific file. This vulnerability can be exploited remotely and may affect users of the system. It is important to take action by updating the software to the latest version or implementing patches to mitigate this risk.",
     "software": [
       "PHPGurukul Online Security Guards Hiring System"
     ]
